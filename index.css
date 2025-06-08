@@ -8,6 +8,14 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+
+    /* Effetto fade-in */
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+body.fade-in {
+    opacity: 1;
 }
 
 /* Intestazione */

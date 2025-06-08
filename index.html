@@ -12,18 +12,33 @@
     </header>
     <main>
         <h2>Chi sono</h2>
-        <p>Ciao! Questo è il mio sito personale. Qui puoi trovare informazioni su di me, i miei progetti e come contattarmi.</p>
+        <p>questo è il mio sito, dove pubblicherò man mano tutti i progetti e i risultati che otterrò e che ho ottenuto durante la mia carriera universitaria e non.</p>
         <h2>Progetti</h2>
+        <p>In questa sezione è possibile visualizzare i progetti effettuati durante la mia carriera da programmatore:</p>
         <ul>
-            <li>Progetto 1</li>
-            <li>Progetto 2</li>
-            <li>Progetto 3</li>
+            <li><a href="prog_web.html">Progetto programmazione web</a></li>
+            <li><a href="prog_db2.html">Progetto database modulo noSQL</a></li>
+            <li><a href="prog_ammsis.html">Progetto laboratorio di amministrazione dei sistemi</a></li>
+            <li><a href="prog_ia.html">Progetto intelligenza artificiale</a></li>
+            <li><a href="prog_oop.html">Progetto programmazione a oggetti</a></li>
         </ul>
+
         <h2>Contatti</h2>
-        <p>Puoi scrivermi a: <a href="mailto:demetrio.priolo2003@gmail.com">demetrio.priolo2003@gmail.com</a></p>
+        <p>Puoi contattarmi per email a : <a href="mailto:demetrio.priolo2003@gmail.com">demetrio.priolo2003@gmail.com</a></p>
+        <p> su Linkedin a <a href="https://www.linkedin.com/in/demetriopriolo/"> Demetrio Priolo</a></p>
     </main>
     <footer>
-        &copy; 2024 Il mio sito
+        <p>2025 Demetrio Priolo</p>
+        <p>Questo sito è realizzato con HTML,CSS e Javascript.</p>
     </footer>
 </body>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.body.style.opacity = 0;
+    document.body.style.transition = "opacity 1s ease-in";
+    requestAnimationFrame(() => {
+      document.body.style.opacity = 1;
+    });
+  });
+</script>
 </html>
