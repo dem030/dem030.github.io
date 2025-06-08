@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuto nel mio sito</title>
+    <link rel="stylesheet" href="prog_web.css">
+</head>
+<body>
+   <title>Ricette del cuore</title>
+   <p>Questo progetto, sviluppato per la materia di programmazione web, richiedeva lo sviluppo di un sito che comprendesse come linguaggi di programmazione: HTML, CSS e Javascript.<br> L'idea del sito è quella di creare un ambiente che ricorda casa, infatti il sito si sviluppa su due macro aree principai. La prima area dedicate alle specialità italiane ha come obiettivo quello di far esplorare all'utente un ampio e variegato repertorio di piatti tipici, autentici e prelibati, provenienti da ogni angolo del Bel Paese. Questa sezione rappresenta una vera e propria celebrazione della cucina italiana, che spazia dalla tradizione più antica alle innovazioni gastronomiche più moderne, riflettendo la diversità e la ricchezza delle nostre terre.</p>
+    <h1>Funzionamento della Pagina</h1>
+    <ul>
+        <li><strong>1. Mappa Interattiva</strong>
+            <ul>
+                <li>La mappa dell'Italia è suddivisa per regioni, ognuna delle quali è rappresentata da un'area cliccabile.</li>
+                <li>Ogni area è associata a un attributo che identifica la regione selezionata.</li>
+            </ul>
+        </li>
+        
+        <li><strong>2. Recupero Dinamico delle Ricette</strong>
+            <ul>
+                <li>Al clic su una regione, viene intercettato un evento JavaScript che invia una richiesta al server, recuperando i dati relativi alle ricette della regione selezionata.</li>
+                <li>Il server elabora la richiesta tramite PHP, utilizzando una query parametrizzata per interrogare il database e ottenere le ricette corrispondenti.</li>
+            </ul>
+        </li>
+
+        <li><strong>3. Visualizzazione delle Ricette</strong>
+            <ul>
+                <li>Ogni ricetta include titolo, immagine, difficoltà e descrizione, presentati in un layout chiaro e leggibile.</li>
+                <li>Se non sono presenti ricette per la regione selezionata, viene mostrato un messaggio informativo.</li>
+            </ul>
+        </li>
+    </ul>
+    <p> Per consultare il codice sorgente, con relazione annessa, è possibile visitare la repository github al seguente indirizzo: <a href="https://github.com/dem030/ricette_del_cuore">Ricette del cuore</a>.</p>
+    <button id="back-home">Torna alla Home</button>
+    <script>
+    // Fade-in animazione per titoli e paragrafi
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeElements = document.querySelectorAll('h1, p, ul');
+        fadeElements.forEach((el, i) => {
+            el.style.opacity = 0;
+            el.style.transform = "translateY(30px)";
+            setTimeout(() => {
+                el.style.transition = "opacity 1s cubic-bezier(.4,0,.2,1), transform 1s cubic-bezier(.4,0,.2,1)";
+                el.style.opacity = 1;
+                el.style.transform = "translateY(0)";
+            }, 300 + i * 200);
+        });
+
+        // Effetto hover sulle sezioni principali della lista
+        const mainListItems = document.querySelectorAll("ul > li");
+        mainListItems.forEach(li => {
+            li.addEventListener("mouseenter", () => {
+                li.style.background = "#f3e5f5";
+                li.style.boxShadow = "0 2px 12px rgba(106,27,154,0.08)";
+                li.style.borderRadius = "10px";
+                li.style.transition = "background 0.3s, box-shadow 0.3s";
+            });
+            li.addEventListener("mouseleave", () => {
+                li.style.background = "none";
+                li.style.boxShadow = "none";
+            });
+        });
+    });
+
+    // Bottone "Torna alla Home"
+    document.getElementById("back-home").addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
+    </script>
+</body>
+</html>

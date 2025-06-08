@@ -1,0 +1,95 @@
+/* Font elegante e colori tenui */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e8eaf6 100%);
+    color: #333;
+    margin: 0;
+    padding: 0 10vw;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #4a148c;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ce93d8;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(76, 0, 130, 0.06);
+    padding: 1.5rem 2rem;
+}
+
+ul {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(76, 0, 130, 0.06);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+li strong {
+    color: #6a1b9a;
+    font-weight: 700;
+}
+
+a {
+    color: #6a1b9a;
+    text-decoration: none;
+    border-bottom: 1px dashed #ce93d8;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+a:hover {
+    color: #4a148c;
+    border-bottom: 1px solid #4a148c;
+}
+
+/* Bottone elegante per tornare alla home */
+#back-home {
+    display: inline-block;
+    margin: 2rem 0 1rem 0;
+    padding: 0.7rem 2rem;
+    background: linear-gradient(90deg, #7b1fa2 0%, #ce93d8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(123,31,162,0.08);
+    transition: background 0.3s, transform 0.2s;
+}
+#back-home:hover {
+    background: linear-gradient(90deg, #4a148c 0%, #ba68c8 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 0 2vw;
+    }
+    p, ul {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+}
