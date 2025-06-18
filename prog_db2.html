@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB_benchmark</title>
+    <link rel="stylesheet" href="prog_db2.css">
+</head>
+<body>
+        <h1>Benchmark tra database non relazionali</h1>
+        <p>Il progetto basato sulla sperimentazione di benchmark di database noSQL. In particolare i database scelti sono: MongoDB e Neo4j.</p>
+        <h2>Neo4j</h2>
+        <p>Neo4j è una delle principali basi di dati a grafo, progettata per gestire e rappresentare dati complessi attraverso relazioni tra entità. A differenza delle tradizionali basi di dati relazionali che usano tabelle per organizzare i dati, Neo4j utilizza un modello di grafico a proprietà, in cui i dati sono rappresentati come nodi e le relazioni tra di essi.<br> In questo DBMS i nodi rappresentano gli oggetti, che possono essere qualsiasi cosa, da una persona a un prodotto. Le relazioni, che collegano questi nodi, sono fondamentali per il modello, poiché permettono di rappresentare come gli oggetti siano interconnessi tra loro. Ogni relazione può avere proprie proprietà, il che consente di arricchire i dati senza complicare la struttura, è altamente scalabile e non richiede uno schema rigido, permettendo un'evoluzione più semplice della struttura dei dati man mano che le necessità cambiano.</p>
+        <h2>MongoDB</h2>
+        <p>MongoDB è un sistema di gestione di database NoSQL, open-source e multipiattaforma. A differenza dei database relazionali tradizionali (come MySQL o PostgreSQL), MongoDB non impone una struttura rigida ai dati. Invece, utilizza un modello di dati orientato ai documenti, dove i dati sono organizzati in documenti simili a JSON.<br> Il modello di dati orientato ai documenti e la mancanza di uno schema rigido lo rendono ideale per applicazioni che richiedono una grande flessibilità nella gestione dei dati. Essendo che può gestire grandi volumi di dati esso può essere scalato orizzontalmente per soddisfare le esigenze crescenti di un'applicazione Offre un’ottima ottimizzazione per le operazioni di lettura e scrittura, rendendolo adatto per applicazioni con carichi di lavoro misti.</p>
+        <h2>Benchmark</h2>
+        <p> per studiare il benchmark dei Database, sono stati generati due dataset uguali, per caratteristiche e volume.<br> per la generazione dei dataset sono stati utilizzati i generatori di dati Faker, per Neo4j e MongoDB.<br> il volume dei dati inseriti è il seguente:</p>
+        <image src="/images/dataset.png" alt="Dataset" class="dataset-image">
+        
+        </p>
+</body>
