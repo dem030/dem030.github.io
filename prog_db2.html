@@ -16,6 +16,46 @@
         <h2>Benchmark</h2>
         <p> per studiare il benchmark dei Database, sono stati generati due dataset uguali, per caratteristiche e volume.<br> per la generazione dei dataset sono stati utilizzati i generatori di dati Faker, per Neo4j e MongoDB.<br> il volume dei dati inseriti è il seguente:</p>
         <image src="/images/dataset.png" alt="Dataset" class="dataset-image">
-        
+        <p> per effettuare il benchmark è stato utilizzato un sistema di query effettuate in maniera automatica attraverso uno script python.<br> una volta effettuate tutte le query lo script salva i tempi di esecuzione calcolandone la media per poi successivamente redarre i grafici per vedere effettivamente le differenze tra prima esecuzione e esecuzioni medie di tutte le query. Dallo studio di tutte le esecuzioni e di tutte le medie, risultano i seguenti grafici:</p>
+        <image src="/images/Benchmark1.png" alt="Benchmark" class="benchmark-image">
+        <image src="/images/Benchmark2.png" alt="Benchmark" class="benchmark-image"></image>
+        <h2>Conclusioni</h2>
+               <p>
+        L’analisi dei risultati sperimentali evidenzia che sia Neo4j che MongoDB rappresentano soluzioni efficaci per la gestione di grandi volumi di dati, ciascuna con caratteristiche tecniche specifiche che ne determinano l’efficacia in contesti differenti.<br>
+        I test condotti su una serie di query, eseguiti con parametri variabili, hanno mostrato che:
         </p>
+        <ul>
+            <li>
+                <strong>MongoDB</strong> garantisce elevate prestazioni in operazioni che richiedono accessi diretti ai dati. La struttura orientata ai documenti rende il database particolarmente efficiente nelle classiche operazioni CRUD e in query che non coinvolgono relazioni complesse tra entità.
+            </li>
+            <li>
+                <strong>Neo4j</strong> si distingue nelle analisi che implicano dati fortemente connessi. Anche in presenza di tempi di esecuzione leggermente più alti in alcuni casi, il sistema mantiene prestazioni costanti e ottimizzate per interrogazioni su grafi, come percorsi, relazioni multilivello e collegamenti indiretti.
+            </li>
+        </ul>
+        <p>
+        Dal punto di vista teorico, entrambi i sistemi si posizionano in modo diverso rispetto al teorema CAP:
+        </p>
+        <ul>
+            <li>
+                <strong>MongoDB</strong> predilige disponibilità e tolleranza alle partizioni, con un compromesso parziale sulla consistenza.
+            </li>
+            <li>
+                <strong>Neo4j</strong>, invece, privilegia consistenza e disponibilità, ed è meno orientato alla scalabilità distribuita.
+            </li>
+        </ul>
+        <p>
+        In sintesi, la scelta tra i due dipende principalmente dalla struttura dei dati e dal tipo di analisi da effettuare:
+        </p>
+        <ul>
+            <li>
+                <strong>MongoDB</strong> risulta più adatto per modelli dati flessibili e operazioni rapide di lettura e scrittura.
+            </li>
+            <li>
+                <strong>Neo4j</strong> si conferma la scelta migliore per analisi che coinvolgono numerose e complesse relazioni tra entità.
+            </li>
+        </ul>
+        <p>
+        L’integrazione di entrambi i database in un unico progetto ha consentito di ottenere un sistema completo, bilanciato tra efficienza operativa e capacità di analisi approfondita delle connessioni tra dati.
+        </p>  
+        
 </body>
