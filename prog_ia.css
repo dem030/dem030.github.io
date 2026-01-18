@@ -21,7 +21,7 @@ h1,h2,h3 {
     padding-bottom: 0.3rem;
 }
 
-p {
+p, p2 {
     font-size: 1.1rem;
     line-height: 1.7;
     margin-top: 2rem;
@@ -30,6 +30,11 @@ p {
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(76, 0, 130, 0.06);
     padding: 1.5rem 2rem;
+}
+
+h2, h3 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 ul {
