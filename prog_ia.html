@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DB_benchmark</title>
-    <link rel="stylesheet" href="prog_db2.css">
+    <title>SOM</title>
+    <link rel="stylesheet" href="prog_ia.css">
 </head>
 <body>
         <h1>SOM- Self Organizing Map</h1>
@@ -27,12 +27,12 @@ La mappa topologica della SOM è stata visualizzata proiettando i vettori di pes
 La visualizzazione mostra i neuroni della griglia disposti nel piano secondo le prime due componenti principali, con collegamenti tra neuroni adiacenti che riflettono la topologia originale della griglia bidimensionale. La continuità delle connessioni e l’assenza di brusche discontinuità indicano che la SOM ha appreso una rappresentazione coerente dei dati, preservando le relazioni topologiche presenti nello spazio di input.
 La stessa mappa topologica viene ottenuta sia al termine della fase di addestramento (train_som.py) sia durante la fase di utilizzo (use.py), confermando che il modello sembra essere correttamente salvato e successivamente riutilizzato senza ulteriori modifiche ai pesi.
 </p2>
-        <image src="/images/ia/mappa_topologica.png" alt="topologia" class="topology-image">
-        <image src="/images/ia/quantization_error_train_vs_test.png" alt="QE" class="QE-image"></image>
+        <img src="/images/ia/mappa_topologica.png" alt="topologia" class="topology-image">
+        <img src="/images/ia/quantization_error_train_vs_test.png" alt="QE" class="QE-image">
         <button id="back-home">Torna alla Home</button>
         <script>
 document.getElementById("back-home").addEventListener("click", function() {
-    window.location.href = "index.html"; // Cambia "index.html" se la tua home ha un altro nome
+    window.location.href = "index.html"; 
 });
 </script>
 

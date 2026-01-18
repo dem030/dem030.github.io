@@ -84,7 +84,7 @@ a:hover {
 
 .topology-image, .QE-image {
     max-width: 100%;
-    width: 90%;
+    width: 60%;
     height: auto;
     margin: 2rem auto;
     display: block;
@@ -103,6 +103,6 @@ a:hover {
         font-size: 1.4rem;
     }
     .topology-image, .QE-image {
-        width: 95%;
+        width: 90%;
     }
 }
