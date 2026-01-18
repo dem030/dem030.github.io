@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benvenuto nel mio sito</title>
-    <link rel="stylesheet" href="prog_ia.css">
+    <title>DB_benchmark</title>
+    <link rel="stylesheet" href="prog_db2.css">
 </head>
 <body>
-    <p>purtroppo ancora non vi sono sviluppi per questo progetto</p>
-    <a><a href="index.html">Torna alla pagina principale</a>
+        <h1>SOM- Self Organizing Map</h1>
+        <p>Il progetto prevede l'implementazione in python di una SOM per l'organizzazione dei dati di un dataset <a href="https://archive.ics.uci.edu/dataset/53/iris">iris</a> </p>
+        <p2>L’implementazione del progetto è stata organizzata in più moduli, ciascuno con una responsabilità ben definita, al fine di migliorare la chiarezza del codice e rispettare la separazione tra fase di addestramento e fase di utilizzo del modello.
+Il file som.py contiene l’implementazione della Self-Organizing Map vera e propria. In particolare, definisce la classe som, che incapsula la struttura della griglia bidimensionale di neuroni, i vettori di peso associati a ciascun neurone e le principali operazioni dell’algoritmo, come la ricerca della Best Matching Unit, l’aggiornamento dei pesi e il calcolo dell’errore di quantizzazione.
+Il file train.py gestisce la fase di addestramento del modello. In questo script vengono caricati i dati, suddivisi in training set e test set, e viene eseguito l’allenamento della SOM per un numero prefissato di epoche. Al termine dell’addestramento, i pesi della rete vengono salvati su file e vengono generate le visualizzazioni richieste, ovvero la mappa topologica e il grafico dell’errore di quantizzazione su training e test set.
+Il file use.py implementa la fase di utilizzo del modello addestrato. In questo caso, la SOM non viene ulteriormente allenata: i pesi salvati durante il training vengono caricati e utilizzati per applicare la mappa a nuovi dati, dimostrando la separazione tra fase di apprendimento e fase di utilizzo, come richiesto dalla specifica del progetto.
+Infine, il file utils.py contiene funzioni di supporto comuni, come il salvataggio e il caricamento dei pesi e le funzioni per la visualizzazione dei risultati. Questo approccio modulare consente di evitare duplicazioni di codice e rende il progetto più mantenibile.
+        </p2>
+        <h2>Algoritmo di apprendimento</h2>
+        <p2> L’algoritmo di apprendimento implementato segue il classico schema delle Self-Organizing Maps ed è basato su un processo di apprendimento non supervisionato.
+In una fase iniziale, i vettori di peso associati ai neuroni della griglia bidimensionale vengono inizializzati con valori casuali. Successivamente, per ciascuna epoca di addestramento, ogni vettore di input viene presentato alla rete e viene individuata la Best Matching Unit (BMU), ovvero il neurone il cui vettore di peso ha la distanza euclidea minima rispetto all’input. La struttura della SOM e l'algoritmo sono visibili qui: <a href="https://github.com/dem030/SOM/blob/main/som.py">som.py</a>.
+</p2>
+        <h2>Risultati</h2>
+        <p2>La valutazione del comportamento della Self-Organizing Map è stata effettuata tramite visualizzazioni grafiche che consentono di analizzare sia la struttura topologica appresa dal modello sia l’andamento dell’errore di quantizzazione durante l’addestramento e nella fase di utilizzo.</p2>
+        <h3>Mappa topologica della SOM</h3>
+        <p2>La mappa topologica della SOM è stata visualizzata proiettando i vettori di peso dei neuroni in uno spazio bidimensionale tramite Principal Component Analysis (PCA). Poiché i vettori di peso hanno la stessa dimensionalità degli input (quattro feature nel caso del dataset Iris), la PCA consente di ridurre la dimensionalità preservando la massima varianza possibile, rendendo interpretabile la struttura della mappa.
+La mappa topologica della SOM è stata visualizzata proiettando i vettori di peso dei neuroni in uno spazio bidimensionale tramite Principal Component Analysis (PCA). Poiché i vettori di peso hanno la stessa dimensionalità degli input (quattro feature nel caso del dataset Iris), la PCA consente di ridurre la dimensionalità preservando la massima varianza possibile, rendendo interpretabile la struttura della mappa.
+La visualizzazione mostra i neuroni della griglia disposti nel piano secondo le prime due componenti principali, con collegamenti tra neuroni adiacenti che riflettono la topologia originale della griglia bidimensionale. La continuità delle connessioni e l’assenza di brusche discontinuità indicano che la SOM ha appreso una rappresentazione coerente dei dati, preservando le relazioni topologiche presenti nello spazio di input.
+La stessa mappa topologica viene ottenuta sia al termine della fase di addestramento (train_som.py) sia durante la fase di utilizzo (use.py), confermando che il modello sembra essere correttamente salvato e successivamente riutilizzato senza ulteriori modifiche ai pesi.
+</p2>
+        <image src="/images/ia/mappa_topologica.png" alt="topologia" class="topology-image">
+        <image src="/images/ia/quantization_error_train_vs_test.png" alt="QE" class="QE-image"></image>
+        <button id="back-home">Torna alla Home</button>
+        <script>
+document.getElementById("back-home").addEventListener("click", function() {
+    window.location.href = "index.html"; // Cambia "index.html" se la tua home ha un altro nome
+});
+</script>
+
 </body>

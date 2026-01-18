@@ -1,0 +1,86 @@
+/* App.css */
+
+/* Reset base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout generale */
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #0077b6, #0096c7);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+/* Sezioni */
+section {
+  background: white;
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  color: #0077b6;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Lista progetti */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section li {
+  background: #e0f7fa;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+section li:hover {
+  background: #b2ebf2;
+}
+
+/* Contatti */
+section a {
+  color: #0096c7;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  padding: 15px;
+  margin-top: 40px;
+}
