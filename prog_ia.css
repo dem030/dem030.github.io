@@ -82,6 +82,16 @@ a:hover {
     transform: translateY(-2px) scale(1.04);
 }
 
+.topology-image, .QE-image {
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(76, 0, 130, 0.1);
+}
+
 @media (max-width: 800px) {
     body {
         padding: 0 2vw;
@@ -91,5 +101,8 @@ a:hover {
     }
     h1 {
         font-size: 1.4rem;
+    }
+    .topology-image, .QE-image {
+        width: 95%;
     }
 }
